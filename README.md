@@ -4,7 +4,7 @@
 
   
   ## Description
-  This project is creating a   
+  This project is creating a test with ten questions and the users final score. 
 
 
   ## Table of Contents

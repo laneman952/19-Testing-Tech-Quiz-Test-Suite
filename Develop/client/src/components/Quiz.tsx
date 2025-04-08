@@ -2,8 +2,12 @@ import { useState, } from 'react';
 import type { Question } from '../models/Question.js';
 import { getQuestions } from '../services/questionApi.js';
 
-const Quiz = () => {
-  const [questions, setQuestions] = useState<Question[]>([]);
+interface QuizProps {
+  questions: Question[];
+}
+
+const Quiz: React.FC<QuizProps> = ({questions: propQuestions}) => {
+  const [questions, setQuestions] = useState<Question[]>(propQuestions || []);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
